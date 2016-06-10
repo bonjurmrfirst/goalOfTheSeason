@@ -1,0 +1,224 @@
+@import "compass/reset";
+
+@font-face {
+  font-family: 'OfficinaSerifExtraBoldC';
+  src: url('../fonts/OfficinaSerifExtraBoldC.eot');
+  src: url('../fonts/OfficinaSerifExtraBoldC.woff2') format('woff2'),
+  url('../fonts/OfficinaSerifExtraBoldC.woff') format('woff'),
+  url('../fonts/OfficinaSerifExtraBoldC.ttf') format('truetype'),
+  url('../fonts/OfficinaSerifExtraBoldC.svg#OfficinaSerifExtraBoldC') format('svg'),
+  url('../fonts/OfficinaSerifExtraBoldC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OfficinaSerifMediumC';
+  src: url('../fonts/OfficinaSerifMediumC.eot');
+  src: url('../fonts/OfficinaSerifMediumC.woff2') format('woff2'),
+  url('../fonts/OfficinaSerifMediumC.woff') format('woff'),
+  url('../fonts/OfficinaSerifMediumC.ttf') format('truetype'),
+  url('../fonts/OfficinaSerifMediumC.svg#OfficinaSerifMediumC') format('svg'),
+  url('../fonts/OfficinaSerifMediumC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OfficinaSerifBookC';
+  src: url('../fonts/OfficinaSerifBookC.eot');
+  src: url('../fonts/OfficinaSerifBookC.woff2') format('woff2'),
+  url('../fonts/OfficinaSerifBookC.woff') format('woff'),
+  url('../fonts/OfficinaSerifBookC.ttf') format('truetype'),
+  url('../fonts/OfficinaSerifBookC.svg#OfficinaSerifBookC') format('svg'),
+  url('../fonts/OfficinaSerifBookC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EuropeDemiC';
+  src: url('../fonts/EuropeDemiC.eot');
+  src: url('../fonts/EuropeDemiC.woff') format('woff'),
+  url('../fonts/EuropeDemiC.ttf') format('truetype'),
+  url('../fonts/EuropeDemiC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+$mainColor: rgb(255, 48, 0);
+$secondaryColor: rgb(153, 153, 153);
+
+$officinaEB: 'OfficinaSerifExtraBoldC';
+$officinaM: 'OfficinaSerifMediumC';
+$officinaB: 'OfficinaSerifBookC';
+$europeC: 'EuropeDemiC';
+
+body {
+  background:
+  url(../img/bg.jpg) top left / 60% auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+
+  .left {
+    img {
+      height: 120px;
+    }
+  }
+  .center {
+    flex: 1 0 100px;
+    height: 84px;
+    background-color: $mainColor;
+    min-width: 580px;
+    text-align: center;
+    margin-top: 17px;
+    p {
+      padding-left: 120px;
+      margin-top: 35px;
+      //line-height: 120px;
+      font-family: $europeC;
+      color: white;
+      font-size: 300%;
+      text-transform: uppercase;
+    }
+    span {
+      padding-left: 120px;
+      margin-top: -40px;
+      //line-height: 120px;
+      font-family: $europeC;
+      color: $mainColor;
+      font-size: 300%;
+      text-transform: uppercase;
+    }
+  }
+  .right {
+    img {
+      height: 120px;
+    }
+  }
+}
+
+.content {
+  padding: 0 30%;
+  text-align: center;
+  margin-top: 60px;
+  p {
+    font-family: $officinaM;
+    text-transform: uppercase;
+    color: $mainColor;
+    min-width: 275px;
+  }
+  a {
+    img {
+      height: 80px;
+      margin-top: -20px;
+      margin-bottom: 20px
+    }
+  }
+}
+
+
+.playersContainer {
+  display: flex;
+  margin: 70px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .player {
+    flex: 1 0 auto;
+    position: relative;
+    margin: 20px 10px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 350px;
+    img {
+      position: absolute;
+      margin-left: 35px;
+      width: 120%;
+      margin-top: -40px;
+      filter: grayscale(0.85);
+      -webkit-filter: brightness(100%);
+      -moz-filter: brightness(100%);
+      -o-filter: brightness(100%);
+      -ms-filter: brightness(100%);
+      transition: 0.5s;
+    }
+    .playerBg {
+      position: absolute;
+      margin-left: -40px;
+      height: 300px;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      & img:first-child {
+        filter: grayscale(0);
+        -webkit-filter: brightness(120%);
+        -moz-filter: brightness(120%);
+        -o-filter: brightness(120%);
+        -ms-filter: brightness(120%);
+        transition: 0.5s;
+      }
+
+      &>img {
+        width: 122%;
+        filter: grayscale(0);
+        -webkit-filter: brightness(120%);
+        -moz-filter: brightness(120%);
+        -o-filter: brightness(120%);
+        -ms-filter: brightness(120%);
+        transition: 0.5s;
+      }
+      .playerName {
+        p {
+          color: $mainColor;
+        }
+      }
+    }
+
+    .playerName {
+      position: absolute;
+      top: 240px;
+      p {
+        font-family: $officinaEB;
+        font-size: x-large;
+        color: $secondaryColor;
+      }
+    }
+
+    .playerInfo {
+      margin-top: 305px;
+      border-top: 2px solid rgb(75, 75, 75);
+      padding-top: 5px;
+      .month {
+        font-family: $officinaB;
+        color: $secondaryColor;
+      }
+      .count {
+        display: block;
+        font-family: $officinaM;
+        font-size: 520%;
+        color: $secondaryColor;
+        float: right;
+      }
+    }
+  }
+}
+
+.footer {
+  bottom: 60px;
+  height: 30px;
+  background-color: $secondaryColor;
+  //margin-bottom: 30px;
+}

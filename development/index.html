@@ -1,0 +1,58 @@
+<html ng-app="playerOfTheYear">
+<head>
+    <meta charset="utf-8">
+    <title>Лучший игрок сезона</title>
+
+    <link href="assets/css/styles.css" rel="stylesheet">
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="assets/css/sweetalert.css" rel="stylesheet">
+    <script src="lib/store_json.min.js"></script>
+
+    <script src="app/app.js"></script>
+</head>
+<body ng-controller="MainController">
+    <div class="header">
+        <div class="left">
+            <img src="assets/img/headerLeftNew.png">
+        </div>
+        <div class="center">
+            <p>Лучший игрок</p>
+            <span>2015/16</span>
+        </div>
+        <div class="left">
+            <img src="assets/img/headerRightNew.png">
+        </div>
+    </div>
+    <div class="content">
+        <a href="http://shakhtar.com">
+            <img src="assets/img/logoShakhtar.png">
+        </a>
+        <p>
+            Принимайте участие в интерактивном голосовании!
+            Сделайте свой выбор лучшего футболиста «Шахтера» по итогам сезона.
+            Имя победителя будет оглашено на официальном сайте клуба.
+        </p>
+    </div>
+
+    <div class="playersContainer">
+        <div class="player" ng-repeat="player in players" ng-click="send(player)">
+            <div class="playerBg"> <img src="assets/img/playerBg.png"></div>
+            <img ng-src="assets/img/{{player.src}}.png">
+            <div class="playerName">
+                <p>{{player.name}}&nbsp</p>
+                <p>{{player.surname | uppercase}}</p>
+            </div>
+            <div class="playerInfo">
+                <!--span class="count">{{player.count}}</span-->
+                <span class="month">{{player.month}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+</body>
+</html>

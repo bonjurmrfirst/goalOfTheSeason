@@ -1,0 +1,265 @@
+/* line 5, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'OfficinaSerifExtraBoldC';
+  src: url("../fonts/OfficinaSerifExtraBoldC.eot");
+  src: url("../fonts/OfficinaSerifExtraBoldC.woff2") format("woff2"), url("../fonts/OfficinaSerifExtraBoldC.woff") format("woff"), url("../fonts/OfficinaSerifExtraBoldC.ttf") format("truetype"), url("../fonts/OfficinaSerifExtraBoldC.svg#OfficinaSerifExtraBoldC") format("svg"), url("../fonts/OfficinaSerifExtraBoldC.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OfficinaSerifMediumC';
+  src: url("../fonts/OfficinaSerifMediumC.eot");
+  src: url("../fonts/OfficinaSerifMediumC.woff2") format("woff2"), url("../fonts/OfficinaSerifMediumC.woff") format("woff"), url("../fonts/OfficinaSerifMediumC.ttf") format("truetype"), url("../fonts/OfficinaSerifMediumC.svg#OfficinaSerifMediumC") format("svg"), url("../fonts/OfficinaSerifMediumC.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OfficinaSerifBookC';
+  src: url("../fonts/OfficinaSerifBookC.eot");
+  src: url("../fonts/OfficinaSerifBookC.woff2") format("woff2"), url("../fonts/OfficinaSerifBookC.woff") format("woff"), url("../fonts/OfficinaSerifBookC.ttf") format("truetype"), url("../fonts/OfficinaSerifBookC.svg#OfficinaSerifBookC") format("svg"), url("../fonts/OfficinaSerifBookC.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'EuropeDemiC';
+  src: url("../fonts/EuropeDemiC.eot");
+  src: url("../fonts/EuropeDemiC.woff") format("woff"), url("../fonts/EuropeDemiC.ttf") format("truetype"), url("../fonts/EuropeDemiC.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 59, ../../../sass/styles.scss */
+body {
+  background: url(../img/bg.jpg) top left/60% auto;
+}
+
+/* line 64, ../../../sass/styles.scss */
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+/* line 70, ../../../sass/styles.scss */
+.header .left img {
+  height: 120px;
+}
+/* line 74, ../../../sass/styles.scss */
+.header .center {
+  flex: 1 0 100px;
+  height: 84px;
+  background-color: #ff3000;
+  min-width: 580px;
+  text-align: center;
+  margin-top: 17px;
+}
+/* line 81, ../../../sass/styles.scss */
+.header .center p {
+  padding-left: 120px;
+  margin-top: 35px;
+  font-family: "EuropeDemiC";
+  color: white;
+  font-size: 300%;
+  text-transform: uppercase;
+}
+/* line 90, ../../../sass/styles.scss */
+.header .center span {
+  padding-left: 120px;
+  margin-top: -40px;
+  font-family: "EuropeDemiC";
+  color: #ff3000;
+  font-size: 300%;
+  text-transform: uppercase;
+}
+/* line 101, ../../../sass/styles.scss */
+.header .right img {
+  height: 120px;
+}
+
+/* line 107, ../../../sass/styles.scss */
+.content {
+  padding: 0 30%;
+  text-align: center;
+  margin-top: 60px;
+}
+/* line 111, ../../../sass/styles.scss */
+.content p {
+  font-family: "OfficinaSerifMediumC";
+  text-transform: uppercase;
+  color: #ff3000;
+  min-width: 275px;
+}
+/* line 118, ../../../sass/styles.scss */
+.content a img {
+  height: 80px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+/* line 127, ../../../sass/styles.scss */
+.playersContainer {
+  display: flex;
+  margin: 70px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* line 133, ../../../sass/styles.scss */
+.playersContainer .player {
+  flex: 1 0 auto;
+  position: relative;
+  margin: 20px 10px;
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 350px;
+}
+/* line 140, ../../../sass/styles.scss */
+.playersContainer .player img {
+  position: absolute;
+  margin-left: 35px;
+  width: 120%;
+  margin-top: -40px;
+  filter: grayscale(0.85);
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+  transition: 0.5s;
+}
+/* line 152, ../../../sass/styles.scss */
+.playersContainer .player .playerBg {
+  position: absolute;
+  margin-left: -40px;
+  height: 300px;
+  width: 100%;
+}
+/* line 157, ../../../sass/styles.scss */
+.playersContainer .player .playerBg img {
+  height: 100%;
+  width: 100%;
+}
+/* line 163, ../../../sass/styles.scss */
+.playersContainer .player:hover {
+  cursor: pointer;
+}
+/* line 165, ../../../sass/styles.scss */
+.playersContainer .player:hover img:first-child {
+  filter: grayscale(0);
+  -webkit-filter: brightness(120%);
+  -moz-filter: brightness(120%);
+  -o-filter: brightness(120%);
+  -ms-filter: brightness(120%);
+  transition: 0.5s;
+}
+/* line 174, ../../../sass/styles.scss */
+.playersContainer .player:hover > img {
+  width: 122%;
+  filter: grayscale(0);
+  -webkit-filter: brightness(120%);
+  -moz-filter: brightness(120%);
+  -o-filter: brightness(120%);
+  -ms-filter: brightness(120%);
+  transition: 0.5s;
+}
+/* line 184, ../../../sass/styles.scss */
+.playersContainer .player:hover .playerName p {
+  color: #ff3000;
+}
+/* line 190, ../../../sass/styles.scss */
+.playersContainer .player .playerName {
+  position: absolute;
+  top: 240px;
+}
+/* line 193, ../../../sass/styles.scss */
+.playersContainer .player .playerName p {
+  font-family: "OfficinaSerifExtraBoldC";
+  font-size: x-large;
+  color: #999999;
+}
+/* line 200, ../../../sass/styles.scss */
+.playersContainer .player .playerInfo {
+  margin-top: 305px;
+  border-top: 2px solid #4b4b4b;
+  padding-top: 5px;
+}
+/* line 204, ../../../sass/styles.scss */
+.playersContainer .player .playerInfo .month {
+  font-family: "OfficinaSerifBookC";
+  color: #999999;
+}
+/* line 208, ../../../sass/styles.scss */
+.playersContainer .player .playerInfo .count {
+  display: block;
+  font-family: "OfficinaSerifMediumC";
+  font-size: 520%;
+  color: #999999;
+  float: right;
+}
+
+/* line 219, ../../../sass/styles.scss */
+.footer {
+  bottom: 60px;
+  height: 30px;
+  background-color: #999999;
+}
