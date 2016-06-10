@@ -1,58 +1,99 @@
 <html ng-app="playerOfTheYear">
 <head>
     <meta charset="utf-8">
-    <title>Гол сезона</title>
+    <title>Лучший игрок сезона</title>
 
     <link href="assets/css/styles.css" rel="stylesheet">
 
-    <script src="../bower_components/angular/angular.min.js"></script>
-    <script src="../bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/sweetalert.min.js"></script>
     <link href="assets/css/sweetalert.css" rel="stylesheet">
     <script src="lib/store_json.min.js"></script>
+    <script src="lib/angular-sanitize.min.js"></script>
+    <script src="lib/videogular.js"></script>
+    <script src="lib/vg-controls.js"></script>
+    <script src="lib/vg-overlay-play.js"></script>
+    <script src="lib/vg-poster.js"></script>
+    <script src="lib/vg-buffering.js"></script>
 
     <script src="app/app.js"></script>
 </head>
 <body ng-controller="MainController">
-    <div class="header">
-        <div class="left">
-            <img src="assets/img/headerLeftNew.png">
-        </div>
-        <div class="center">
-            <p>Гол сезона</p>
-            <span>2015/16</span>
-        </div>
-        <div class="left">
-            <img src="assets/img/headerRightNew.png">
-        </div>
+<div class="header">
+    <div class="left">
+        <img src="assets/img/headerLeftNew.png">
     </div>
-    <div class="content">
-        <a href="http://shakhtar.com">
-            <img src="assets/img/logoShakhtar.png">
-        </a>
-        <p>
-            Принимайте участие в интерактивном голосовании!
-            Сделайте свой выбор лучшего гола «Шахтера» по итогам сезона.
-            Результаты будут оглашены на официальном сайте клуба.
-        </p>
+    <div class="center">
+        <p>Гол сезона</p>
+        <span>2015/16</span>
     </div>
+    <div class="left">
+        <img src="assets/img/headerRightNew.png">
+    </div>
+</div>
+<div class="content">
+    <a href="http://shakhtar.com">
+        <img src="assets/img/logoShakhtar.png">
+    </a>
+    <p>
+        Принимайте участие в интерактивном голосовании!
+        Сделайте свой выбор лучшего гола «Шахтера» по итогам сезона.
+        Результаты будут оглашены на официальном сайте клуба.
+    </p>
+</div>
 
-    <div class="playersContainer">
-        <div class="player" ng-repeat="player in players" ng-click="send(player)">
-            <div class="playerBg"> <img src="assets/img/playerBg.png"></div>
-            <img ng-src="assets/img/{{player.src}}.png">
-            <div class="playerName">
-                <p>{{player.name}}&nbsp</p>
-                <p>{{player.surname | uppercase}}</p>
-            </div>
-            <div class="playerInfo">
-                <span class="month">{{player.month | uppercase}}</span>
-                <span class="count">{{player.info}}</span>
-            </div>
+<div class="playersContainer">
+    <div class="player" ng-repeat="player in players" ng-click="onPortraitClickHandler(player)">
+        <div class="playerBg"> <img src="assets/img/playerBg.png"></div>
+        <img class="playerImg" ng-src="assets/img/{{player.src}}.png">
+        <img class="playButton" src="assets/img/playButton.png">
+        <div class="playerName">
+            <p>{{player.name}}&nbsp</p>
+            <p>{{player.surname | uppercase}}</p>
+        </div>
+        <div class="playerInfo">
+            <span class="month">{{player.month | uppercase}}</span>
+            <span class="count">{{player.info}}</span>
         </div>
     </div>
+</div>
 
-    <div class="footer">
+<div class="footer">
+</div>
 
+<div ng-controller="VideoController as controller">
+    <div ng-if="showVideoPlayer"  class="videogular-container">
+        <videogular vg-theme="config.theme">
+            <vg-media vg-src="config.sources"
+                      vg-tracks="config.tracks">
+            </vg-media>
+
+            <vg-controls>
+                <vg-play-pause-button></vg-play-pause-button>
+                <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+                <vg-scrub-bar>
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                </vg-scrub-bar>
+                <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+                <vg-volume>
+                    <vg-mute-button></vg-mute-button>
+                    <vg-volume-bar></vg-volume-bar>
+                </vg-volume>
+                <vg-fullscreen-button></vg-fullscreen-button>
+            </vg-controls>
+
+            <vg-overlay-play></vg-overlay-play>
+            <vg-poster vg-url='config.plugins.poster'></vg-poster>
+        </videogular>
     </div>
+    <div class="aboutGoal" ng-if="showVideoPlayer">
+        <p class="name">{{currentPlayer.name}} {{currentPlayer.surname | uppercase}}</p>
+        <p class="goalInfo">{{currentPlayerInfo}}</p>
+        <div class="voteButton" ng-click="send()" ng-hide="isStored()">
+            <span>Отправить</span>
+        </div>
+    </div>
+</div>
 </body>
 </html>

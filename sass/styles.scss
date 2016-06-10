@@ -2,46 +2,46 @@
 
 @font-face {
   font-family: 'OfficinaSerifExtraBoldC';
-  src: url('../fonts/OfficinaSerifExtraBoldC.eot');
-  src: url('../fonts/OfficinaSerifExtraBoldC.woff2') format('woff2'),
-  url('../fonts/OfficinaSerifExtraBoldC.woff') format('woff'),
-  url('../fonts/OfficinaSerifExtraBoldC.ttf') format('truetype'),
-  url('../fonts/OfficinaSerifExtraBoldC.svg#OfficinaSerifExtraBoldC') format('svg'),
-  url('../fonts/OfficinaSerifExtraBoldC.eot?#iefix') format('embedded-opentype');
+  src: url('fonts/OfficinaSerifExtraBoldC.eot');
+  src: url('fonts/OfficinaSerifExtraBoldC.woff2') format('woff2'),
+  url('fonts/OfficinaSerifExtraBoldC.woff') format('woff'),
+  url('fonts/OfficinaSerifExtraBoldC.ttf') format('truetype'),
+  url('fonts/OfficinaSerifExtraBoldC.svg#OfficinaSerifExtraBoldC') format('svg'),
+  url('fonts/OfficinaSerifExtraBoldC.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OfficinaSerifMediumC';
-  src: url('../fonts/OfficinaSerifMediumC.eot');
-  src: url('../fonts/OfficinaSerifMediumC.woff2') format('woff2'),
-  url('../fonts/OfficinaSerifMediumC.woff') format('woff'),
-  url('../fonts/OfficinaSerifMediumC.ttf') format('truetype'),
-  url('../fonts/OfficinaSerifMediumC.svg#OfficinaSerifMediumC') format('svg'),
-  url('../fonts/OfficinaSerifMediumC.eot?#iefix') format('embedded-opentype');
+  src: url('fonts/OfficinaSerifMediumC.eot');
+  src: url('fonts/OfficinaSerifMediumC.woff2') format('woff2'),
+  url('fonts/OfficinaSerifMediumC.woff') format('woff'),
+  url('fonts/OfficinaSerifMediumC.ttf') format('truetype'),
+  url('fonts/OfficinaSerifMediumC.svg#OfficinaSerifMediumC') format('svg'),
+  url('fonts/OfficinaSerifMediumC.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OfficinaSerifBookC';
-  src: url('../fonts/OfficinaSerifBookC.eot');
-  src: url('../fonts/OfficinaSerifBookC.woff2') format('woff2'),
-  url('../fonts/OfficinaSerifBookC.woff') format('woff'),
-  url('../fonts/OfficinaSerifBookC.ttf') format('truetype'),
-  url('../fonts/OfficinaSerifBookC.svg#OfficinaSerifBookC') format('svg'),
-  url('../fonts/OfficinaSerifBookC.eot?#iefix') format('embedded-opentype');
+  src: url('fonts/OfficinaSerifBookC.eot');
+  src: url('fonts/OfficinaSerifBookC.woff2') format('woff2'),
+  url('fonts/OfficinaSerifBookC.woff') format('woff'),
+  url('fonts/OfficinaSerifBookC.ttf') format('truetype'),
+  url('fonts/OfficinaSerifBookC.svg#OfficinaSerifBookC') format('svg'),
+  url('fonts/OfficinaSerifBookC.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'EuropeDemiC';
-  src: url('../fonts/EuropeDemiC.eot');
-  src: url('../fonts/EuropeDemiC.woff') format('woff'),
-  url('../fonts/EuropeDemiC.ttf') format('truetype'),
-  url('../fonts/EuropeDemiC.eot?#iefix') format('embedded-opentype');
+  src: url('fonts/EuropeDemiC.eot');
+  src: url('fonts/EuropeDemiC.woff') format('woff'),
+  url('fonts/EuropeDemiC.ttf') format('truetype'),
+  url('fonts/EuropeDemiC.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -126,7 +126,7 @@ body {
 
 .playersContainer {
   display: flex;
-  margin: 70px 20px;
+  margin: 70px 20px 20px 20px;
   flex-wrap: wrap;
   justify-content: center;
 
@@ -137,6 +137,12 @@ body {
     min-width: 250px;
     max-width: 250px;
     min-height: 350px;
+    .playButton {
+      height: auto;
+      width: 70px;
+      bottom: 150px;
+      opacity: 0.4;
+    }
     img {
       position: absolute;
       margin-left: 35px;
@@ -162,6 +168,12 @@ body {
 
     &:hover {
       cursor: pointer;
+      .playButton {
+        height: auto;
+        width: 70px;
+        bottom: 150px;
+        opacity: 1;
+      }
       & img:first-child {
         filter: grayscale(0);
         -webkit-filter: brightness(120%);
@@ -171,7 +183,7 @@ body {
         transition: 0.5s;
       }
 
-      &>img {
+      & img.playerImg {
         width: 122%;
         filter: grayscale(0);
         -webkit-filter: brightness(120%);
@@ -221,8 +233,72 @@ body {
 }
 
 .footer {
-  bottom: 60px;
-  height: 30px;
+  //bottom: 60px;
+  height: 5px;
   background-color: $secondaryColor;
+  margin-bottom: 20px;
   //margin-bottom: 30px;
+}
+
+.videogular-container {
+  width: 100%;
+  height: 320px;
+  margin: auto;
+  overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .videogular-container {
+    width: 1170px;
+    height: 658.125px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .videogular-container {
+    width: 940px;
+    height: 528.75px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .videogular-container {
+    width: 728px;
+    height: 409.5px;
+  }
+}
+
+.aboutGoal {
+  text-align: center;
+  margin: 15px auto;
+  .name {
+    font-family: $officinaEB;
+    color: $secondaryColor;
+    font-size: xx-large;
+  }
+  .goalInfo {
+    font-family: $officinaB;
+    color: $secondaryColor;
+    font-size: large;
+    margin-top: 3px;
+  }
+  .voteButton {
+    margin-top: 10px;
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background-color: $mainColor;
+    border-radius: 6px;
+    span {
+      line-height: 40px;
+      color: white;
+      font-family: $officinaEB;
+      font-size: large;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: darken($mainColor, 20%);
+    }
+  }
 }

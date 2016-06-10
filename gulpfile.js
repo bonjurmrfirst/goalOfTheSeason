@@ -10,7 +10,14 @@ gulp.task('pre-build', function() {
 
   gulp.src([
     'bower_components/angular/angular.min.js',
-    'bower_components/sweetalert/dist/sweetalert.min.js'
+    'bower_components/sweetalert/dist/sweetalert.min.js',
+    'bower_components/angular-sanitize/angular-sanitize.min.js',
+    "bower_components/videogular/videogular.js",
+    "bower_components/videogular-controls/vg-controls.js",
+    "bower_components/videogular-overlay-play/vg-overlay-play.js",
+    "bower_components/videogular-poster/vg-poster.js",
+    "bower_components/videogular-buffering/vg-buffering.js",
+    'bower_components/jquery/dist/jquery.min.js'
   ])
     .pipe(gulp.dest('build/lib'));
 });
