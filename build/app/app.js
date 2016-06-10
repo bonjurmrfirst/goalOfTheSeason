@@ -3,15 +3,15 @@
 angular
   .module('playerOfTheYear', [])
 
-  .controller('MainController', ['$scope', 'playersService', function($scope, playersService) {
+  .controller('MainController', ['$scope', '$http', 'playersService', function($scope, $http, playersService) {
     $scope.players = playersService.players;
 
     $scope.send = function(player) {
-      var localStorageKey = 'bestPlayerOfTheSeason04';
+      var localStorageKey = 'bestPlayerOfTheSeason011';
 
       if (!store.get(localStorageKey)) {
         swal({
-            title: "Лучший игрока сезона: \n" + player.name + ' ' + player.surname,
+            title: "Лучший игрок сезона: \n" + player.name + ' ' + player.surname,
             text: "Вы уверены?",
             type: "info",
             showCancelButton: true,
@@ -25,6 +25,11 @@ angular
             if (isConfirm) {
               swal("Отправлено!", "Итоги голосования будут опубликованы на официальном сайте, следите за новостями!", "success");
               store.set(localStorageKey, player.name + ' ' + player.surname);
+              $http({
+                url: 'http://shakhtar.com/ru/dreamteam/add/',
+                method: "POST",
+                data: {'bestPlayer' : player.surname}
+              });
             } else {
               //swal("Отменено!", "", "error");
             }
