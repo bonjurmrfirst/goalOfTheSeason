@@ -54,7 +54,7 @@ angular
       {
         name: '',
         surname: 'Бернард',
-        info: 'Лучший в июле, сентябре, октябре, ноябре, декабре',
+        info: '«Динамо» – «Шахтер» – 0:2',
         month: 'Июль',
         src: 'Bernard'
       },
@@ -77,7 +77,7 @@ angular
         surname: 'Степаненко',
         info: '«Заря» – «Шахтер» – 1:7',
         month: 'Октябрь',
-        src: 'Stepapnenko'
+        src: 'Stepanenko'
       },
       {
         name: 'Ярослав',
@@ -98,7 +98,7 @@ angular
         surname: 'Тайсон',
         info: '«Коринтианс» – «Шахтер» – 3:2',
         month: 'Январь',
-        src: 'Taison'
+        src: 'Tayson'
       },
       {
         name: '',
@@ -112,14 +112,14 @@ angular
         surname: 'Срна',
         info: '«Шахтер» – «Ворскла» – 3:1',
         month: 'Март',
-        src: 'Marlos'
+        src: 'Srna'
       },
       {
         name: 'Тарас',
         surname: 'Степаненко',
         info: '«Шахтер» – «Севилья» – 2:2',
         month: 'Апрель',
-        src: 'Stepapnenko2'
+        src: 'Stepanenko2'
       },
       {
         name: '',

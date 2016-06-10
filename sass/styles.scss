@@ -133,7 +133,7 @@ body {
   .player {
     flex: 1 0 auto;
     position: relative;
-    margin: 20px 10px;
+    margin: 30px 10px;
     min-width: 250px;
     max-width: 250px;
     min-height: 350px;
@@ -202,15 +202,19 @@ body {
       border-top: 2px solid rgb(75, 75, 75);
       padding-top: 5px;
       .month {
-        font-family: $officinaB;
-        color: $secondaryColor;
+        font-family: $officinaEB;
+        color: $mainColor;
+        margin-bottom: 2px;
+        float: right;
+        display: block;
+        width: 100%;
       }
       .count {
         display: block;
-        font-family: $officinaM;
-        font-size: 520%;
+        font-family: $officinaB;
+        //font-size: 520%;
         color: $secondaryColor;
-        float: right;
+        //float: right;
       }
     }
   }

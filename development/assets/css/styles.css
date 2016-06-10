@@ -169,7 +169,7 @@ body {
 .playersContainer .player {
   flex: 1 0 auto;
   position: relative;
-  margin: 20px 10px;
+  margin: 30px 10px;
   min-width: 250px;
   max-width: 250px;
   min-height: 350px;
@@ -245,19 +245,21 @@ body {
 }
 /* line 204, ../../../sass/styles.scss */
 .playersContainer .player .playerInfo .month {
+  font-family: "OfficinaSerifExtraBoldC";
+  color: #ff3000;
+  margin-bottom: 2px;
+  float: right;
+  display: block;
+  width: 100%;
+}
+/* line 212, ../../../sass/styles.scss */
+.playersContainer .player .playerInfo .count {
+  display: block;
   font-family: "OfficinaSerifBookC";
   color: #999999;
 }
-/* line 208, ../../../sass/styles.scss */
-.playersContainer .player .playerInfo .count {
-  display: block;
-  font-family: "OfficinaSerifMediumC";
-  font-size: 520%;
-  color: #999999;
-  float: right;
-}
 
-/* line 219, ../../../sass/styles.scss */
+/* line 223, ../../../sass/styles.scss */
 .footer {
   bottom: 60px;
   height: 30px;

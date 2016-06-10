@@ -98,15 +98,7 @@ body {
 
 /* line 64, ../../../sass/styles.scss */
 .header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   margin: 10px 0;
 }
@@ -116,10 +108,6 @@ body {
 }
 /* line 74, ../../../sass/styles.scss */
 .header .center {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 100px;
-  -moz-box-flex: 1;
-  -ms-flex: 1 0 100px;
   flex: 1 0 100px;
   height: 84px;
   background-color: #ff3000;
@@ -172,27 +160,13 @@ body {
 
 /* line 127, ../../../sass/styles.scss */
 .playersContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 70px 20px;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 /* line 133, ../../../sass/styles.scss */
 .playersContainer .player {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-  -moz-box-flex: 1;
-  -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   position: relative;
   margin: 20px 10px;
@@ -211,9 +185,6 @@ body {
   -moz-filter: brightness(100%);
   -o-filter: brightness(100%);
   -ms-filter: brightness(100%);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
 }
 /* line 152, ../../../sass/styles.scss */
@@ -239,9 +210,6 @@ body {
   -moz-filter: brightness(120%);
   -o-filter: brightness(120%);
   -ms-filter: brightness(120%);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
 }
 /* line 174, ../../../sass/styles.scss */
@@ -252,9 +220,6 @@ body {
   -moz-filter: brightness(120%);
   -o-filter: brightness(120%);
   -ms-filter: brightness(120%);
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
 }
 /* line 184, ../../../sass/styles.scss */

@@ -52,46 +52,81 @@ angular
   .factory('playersService', function() {
     var players = [
       {
-        name: 'Алекс',
-        surname: 'Тейшейра',
-        month: 'Лучший в июле, сентябре, октябре, ноябре, декабре',
-        count: 5,
-        src: 'Teixeira'
-      },
-      {
         name: '',
-        surname: 'Марлос',
-        month: 'Лучший в августе, апреле',
-        count: 2,
-        src: 'Marlos'
+        surname: 'Бернард',
+        info: 'Лучший в июле, сентябре, октябре, ноябре, декабре',
+        month: 'Июль',
+        src: 'Bernard'
       },
       {
-        name: 'Виктор',
-        surname: 'Коваленко',
-        month: 'Лучший в январе',
-        count: 1,
-        src: 'Kovalenko'
+        name: 'Александр',
+        surname: 'Гладкий',
+        info: '«Шахтер» – «Рапид» – 2:2',
+        month: 'Август',
+        src: 'Gladkyy'
       },
       {
-        name: 'Андрей',
-        surname: 'Пятов',
-        month: 'Лучший в феврале',
-        count: 1,
-        src: 'Pyatov'
+        name: 'Ярослав',
+        surname: 'Ракицкий',
+        info: '«Металлист» – «Шахтер» – 0:5',
+        month: 'Сентябрь',
+        src: 'Rakitskyy'
       },
       {
-        name: '',
-        surname: 'Тайсон',
-        month: 'Лучший в марте',
-        count: 1,
-        src: 'Tayson'
+        name: 'Тарас',
+        surname: 'Степаненко',
+        info: '«Заря» – «Шахтер» – 1:7',
+        month: 'Октябрь',
+        src: 'Stepapnenko'
+      },
+      {
+        name: 'Ярослав',
+        surname: 'Ракицкий',
+        info: '«Говерла» – «Шахтер» – 1:6',
+        month: 'Ноябрь',
+        src: 'Rakitskyy2'
       },
       {
         name: '',
         surname: 'Эдуардо',
-        month: 'Лучший в мае',
-        count: 1,
+        info: '«Шахтер» – «Карпаты» – 3:0',
+        month: 'Декабрь',
         src: 'Eduardo'
+      },
+      {
+        name: '',
+        surname: 'Тайсон',
+        info: '«Коринтианс» – «Шахтер» – 3:2',
+        month: 'Январь',
+        src: 'Taison'
+      },
+      {
+        name: '',
+        surname: 'Марлос',
+        info: '«Шальке» – «Шахтер» – 0:3',
+        month: 'Февраль',
+        src: 'Marlos'
+      },
+      {
+        name: 'Дарио',
+        surname: 'Срна',
+        info: '«Шахтер» – «Ворскла» – 3:1',
+        month: 'Март',
+        src: 'Marlos'
+      },
+      {
+        name: 'Тарас',
+        surname: 'Степаненко',
+        info: '«Шахтер» – «Севилья» – 2:2',
+        month: 'Апрель',
+        src: 'Stepapnenko2'
+      },
+      {
+        name: '',
+        surname: 'Эдуардо',
+        info: '«Севилья» - «Шахтер» - 3:1',
+        month: 'Май',
+        src: 'Eduardo2'
       }
     ];
 

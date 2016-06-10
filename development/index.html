@@ -1,7 +1,7 @@
 <html ng-app="playerOfTheYear">
 <head>
     <meta charset="utf-8">
-    <title>Лучший гол сезона</title>
+    <title>Гол сезона</title>
 
     <link href="assets/css/styles.css" rel="stylesheet">
 
@@ -18,7 +18,7 @@
             <img src="assets/img/headerLeftNew.png">
         </div>
         <div class="center">
-            <p>Лучший гол</p>
+            <p>Гол сезона</p>
             <span>2015/16</span>
         </div>
         <div class="left">
@@ -45,8 +45,8 @@
                 <p>{{player.surname | uppercase}}</p>
             </div>
             <div class="playerInfo">
-                <!--span class="count">{{player.count}}</span-->
-                <span class="month">{{player.month}}</span>
+                <span class="month">{{player.month | uppercase}}</span>
+                <span class="count">{{player.info}}</span>
             </div>
         </div>
     </div>
